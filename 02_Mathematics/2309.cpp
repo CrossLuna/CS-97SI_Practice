@@ -26,11 +26,7 @@ int main() {
 			filter_high |= one;
 			one <<= 1;
 		}
-		/*
-		cout << hex << filter_one << endl;
-		cout << hex << filter_low << endl;
-		cout << hex << filter_high << endl;
-		*/
+		
 		unsigned low = (r & filter_high) + 1;
 		unsigned high = r | filter_low;
 		cout << low << ' ' << high << endl;
